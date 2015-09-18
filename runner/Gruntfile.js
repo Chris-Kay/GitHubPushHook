@@ -8,9 +8,21 @@ module.exports = function(grunt) {
                 configFile: 'karma.conf.js',
                 singleRun: true
             }
+        },
+        jshint: {
+            app: {
+                'files': { 
+                    'src': '../source/*'
+                }
+            }
         }
     });
- 
+
+    grunt.registerTask('app', function() {
+        grunt.task.run('jshint:app');
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask('default', ['karma']);
 };
