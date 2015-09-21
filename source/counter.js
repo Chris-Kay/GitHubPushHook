@@ -1,5 +1,7 @@
 var counter = (function () {
 
+  //  var value = 0;
+
     var add = function(num1, num2) {
         return num1 + num2;
     };
@@ -10,7 +12,7 @@ var counter = (function () {
  
     return {
         add: add,
-        subtract: subtract
+        subtract: subtract,
+        counter: counter
     };
- 
 }());
